@@ -1,0 +1,26 @@
+# Build artifacts
+blazekv
+*.o
+*.a
+*.so
+*.dll
+*.exe
+
+# Database file
+data.db
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Compilation output
+*.out
+
+# Debug symbols
+*.dSYM/
+*.su
+*.gch
