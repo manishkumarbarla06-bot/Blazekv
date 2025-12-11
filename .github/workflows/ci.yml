@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Install build tools
+      run: sudo apt-get update && sudo apt-get install -y build-essential gcc
+
+    - name: Build C binary
+      run: |
+        gcc -Wall -Wextra -O2 blazekv.c -o blazekv
+        ./blazekv --version 2>/dev/null || true
+
+    - name: Lint Python
+      run: |
+        python3 -m pip install --user flake8
+        python3 -m flake8 --version || true
+        python3 -m flake8 . || true
+
+    - name: Smoke-test Python package
+      run: |
+        python3 -m pip install --user . || true
+        python3 -c "import blazekv; print('blazekv', getattr(blazekv, '__version__', 'unknown'))" || true

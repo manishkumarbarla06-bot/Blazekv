@@ -1,5 +1,7 @@
 # 🔥 BlazeKV
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Sponsors](https://img.shields.io/badge/Sponsor-GitHub%20Sponsors-blue.svg)](https://github.com/sponsors/manishkumarbarla06-bot) [![Patreon](https://img.shields.io/badge/Patreon-Support-orange.svg)](https://www.patreon.com/yourname)
+
 An ultra-fast, minimal key-value store written in C. BlazeKV is designed for simplicity, speed, and ease of use.
 
 ## Features
