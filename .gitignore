@@ -24,3 +24,67 @@ data.db
 *.dSYM/
 *.su
 *.gch
+
+# Environment variables and secrets
+.env
+.env.local
+.env.*.local
+.env.*.private
+secrets.txt
+secrets.json
+credentials.json
+credentials.txt
+
+# SSH and private keys
+*.key
+*.pem
+*.pub
+.ssh/
+id_rsa
+id_ed25519
+
+# IDE secrets
+.idea/credentials.xml
+.vscode/settings.json
+
+# OS and backup files
+*.bak
+*.backup
+*.tmp
+*.log
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Dependency cache
+node_modules/
+__pycache__/
+*.pyc
+.Python
+build/
+dist/
+*.egg-info/
+
+# Local development
+.venv/
+venv/
+ENV/
+env/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Application data
+data.db
+*.db
+database/
+
+# Backup directories
+BlazeKV_Backups/
+backups/
+*.backup.db
+
+# CI/CD
+.github/workflows/*.log
+
